@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AURA – Store Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo">
+    </a>
+
+    <div class="nav-right">
+
+  <!-- Profile Icon -->
+  <a href="profile.html" class="profile-icon">
+    <img
+      id="headerProfileAvatar"
+      src="assets/profile-avatar.jpg"
+      alt="Profile"
+    >
+  </a>
+
+  <!-- Menu Toggle -->
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  </div>
+
+  <!-- Toggle Menu -->
+  <nav class="nav mobile-nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="properties.html">Properties</a>
+    <a href="rewards.html">Rewards</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="buy-earn.html">Buy & Earn</a>
+  </nav>
+</header>
+
+<!-- ================= STORE DETAILS ================= -->
+<main>
+  <section class="container store-details-page">
+    <div class="store-card">
+
+      <h1 class="page-title">Store Details</h1>
+
+      <h3 id="storeName"></h3>
+      <p id="storeAddress"></p>
+      <p id="storeDistance"></p>
+
+      <div class="store-actions">
+        <a id="mapLink" class="btn-outline" target="_blank" rel="noopener noreferrer">
+          Open in Google Maps
+        </a>
+        <a id="uberLink" class="btn-outline" target="_blank" rel="noopener noreferrer">
+          Open in Uber
+        </a>
+      </div>
+
+      <hr class="store-divider">
+
+      <h4>Show this QR code at store to earn rewards</h4>
+
+      <div class="qr-section">
+        <canvas id="qrCode"></canvas>
+        <p class="qr-info">
+          Partner will scan this QR code after purchase.
+        </p>
+      </div>
+
+      <button class="btn-primary" id="simulateScan">
+        Simulate Scan & Earn Rewards
+      </button>
+
+    </div>
+  </section>
+</main>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+<script src="js/store-details.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

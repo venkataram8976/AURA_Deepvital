@@ -1,0 +1,536 @@
+/* ===== HERO SECTION ===== */
+
+.hero {
+  background: #ffffff;
+  padding: 2.2rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  max-width: 600px;
+  color: var(--gray);
+}
+
+.page-title {
+  margin-bottom: 1.5rem;
+}
+
+/* Hero Actions */
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hero Visual */
+
+.hero-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Floating animation */
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== INFORMATIONAL PAGES ===== */
+
+.content-section {
+  padding: 3rem 0;
+}
+
+.content-block {
+  max-width: 1300px;
+  margin-bottom: 2.5rem;
+}
+
+.content-block h2 {
+  margin-bottom: 0.6rem;
+}
+
+.content-block p {
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-visual {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.8rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-visual img {
+    max-width: 300px;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+  }
+}
+
+/* ===== REWARDS PAGE ===== */
+
+.rewards-page .crypto-card {
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== PROPERTIES PAGE ===== */
+
+.properties-page .page-title {
+  margin-bottom: 0.3rem;
+}
+
+/* ================= STORE DETAILS ================= */
+
+.store-details-page {
+  padding: 2.5rem 0;
+}
+
+.store-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.store-card h3 {
+  margin-top: 0.5rem;
+}
+
+#storeAddress,
+#storeDistance {
+  color: var(--gray);
+}
+
+#storeDistance {
+  margin: 0.75rem 0;
+  font-weight: 500;
+}
+
+.store-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.store-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.8rem 0;
+}
+
+.qr-section {
+  text-align: center;
+}
+
+#qrCode {
+  margin: 1rem auto;
+  padding: 12px;
+  background: var(--light-grey);
+  border-radius: 12px;
+}
+
+#barCode {
+  margin-top: 1rem;
+}
+
+.qr-info {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+#simulateScan {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/* ================= NEARBY STORES ================= */
+
+.nearby-page {
+  padding: 2.5rem 0;
+}
+
+.nearby-header {
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  margin-bottom: 1.5rem;
+}
+
+.info-card ul {
+  padding-left: 1.2rem;
+}
+
+.info-card li {
+  margin-bottom: 0.4rem;
+  color: var(--gray);
+}
+
+.category-preview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.chip {
+  background: var(--light-grey);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.reward-teaser {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.location-action {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.trust-note {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* .pulse {
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(79,70,229,0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(79,70,229,0); }
+  100% { box-shadow: 0 0 0 0 rgba(79,70,229,0); }
+} */
+
+/* ================= REWARDS OVERVIEW ================= */
+
+.rewards-overview {
+  background: var(--border); /* #E8EAE5 */
+  padding: 3.5rem 0;
+  margin-top: 3.5rem;
+}
+
+.overview-header {
+  margin-bottom: 2rem;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overview-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.6rem;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.overview-card.primary {
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.overview-card h4 {
+  font-size: 0.95rem;
+  color: var(--gray);
+  margin-bottom: 0.4rem;
+}
+
+.metric {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.status {
+  font-size: 0.85rem;
+}
+
+.status.positive {
+  color: var(--primary);
+}
+
+.status.neutral {
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .metric {
+    font-size: 1.7rem;
+  }
+}
+
+.crypto-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.fiat-value {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-top: -4px;
+}
+
+/* ================= MODULE DETAIL ================= */
+
+.module-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  padding: 2rem 5%;
+  min-height: calc(100vh - 80px);
+  background: #ffffff;
+}
+
+.module-sidebar {
+  border-right: 1px solid var(--border);
+  padding-right: 1.5rem;
+}
+
+.module-sidebar-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.module-topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.module-topic-list li {
+  padding: 0.65rem 0.8rem;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #374151;
+}
+
+.module-topic-list li:hover {
+  background: var(--light-grey);
+
+}
+
+.module-topic-list li.active {
+  background: var(--light-grey);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.download-pdf {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.module-content {
+  padding-left: 0.5rem;
+}
+
+.topic-content {
+  display: none;
+}
+
+.topic-content.active {
+  display: block;
+}
+
+.topic-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.topic-content p {
+  max-width: 850px;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .module-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .module-sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+  }
+}
+
+/* ================= GRAPHS ================= */
+
+.rewards-graph-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 2rem;
+}
+
+.graph-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.graph-card h4 {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.graph-header select {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+  .rewards-graph-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.graph-card canvas {
+  width: 100% !important;
+  height: 240px !important;
+}
+
+/* ================= PAGE FIXES ================= */
+
+.recommendations .grid-3 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  .hero,
+  .rewards-overview,
+  .recommendations {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+/* Home interaction polish */
+#rewards-overview { scroll-margin-top: 88px; }
+.recommendations { scroll-margin-top: 90px; }

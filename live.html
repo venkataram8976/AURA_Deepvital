@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA – Live Sessions</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- JS -->
+  <script src="js/app.js" defer></script>
+  <script src="js/live.js" defer></script>
+</head>
+
+<body class="live-page">
+
+<!-- ================= HEADER (COMMON) ================= -->
+<header class="header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo">
+    </a>
+
+    <div class="nav-right">
+
+  <!-- Profile Icon -->
+  <a href="profile.html" class="profile-icon">
+    <img
+      id="headerProfileAvatar"
+      src="assets/profile-avatar.jpg"
+      alt="Profile"
+    >
+  </a>
+
+  <!-- Menu Toggle -->
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  </div>
+
+  <!-- Toggle Menu -->
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="resources.html" class="active">Resources</a>
+    <a href="properties.html">Properties</a>
+    <a href="rewards.html">Rewards</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="buy-earn.html">Buy & Earn</a>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+  <section class="container" style="margin-top:2.5rem;">
+    <h1 class="page-title">Live Sessions</h1>
+    <p>
+      View scheduled expert sessions. Select a date on the calendar to
+      see session details and join when live.
+    </p>
+  </section>
+
+  <!-- LIVE CALENDAR -->
+  <section class="container" style="margin-top:2rem;">
+    <div class="aura-calendar">
+
+      <div class="calendar-top">
+        <button id="prevMonth" class="cal-btn">‹</button>
+        <h3 id="monthYear"></h3>
+        <button id="nextMonth" class="cal-btn">›</button>
+      </div>
+
+      <div class="calendar-weekdays">
+        <span>Sun</span><span>Mon</span><span>Tue</span>
+        <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+      </div>
+
+      <div class="calendar-days" id="calendarGrid"></div>
+
+    </div>
+  </section>
+
+  <!-- SESSION DETAILS -->
+  <section class="container" style="margin-top:2.5rem;">
+    <h2 class="page-title">Session Details</h2>
+
+    <div id="sessionDetails" class="card">
+      <p>Select a highlighted date to view live session details.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER (COMMON) ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div class="footer-section">
+      <img src="assets/logo.svg" alt="AURA Logo" style="height:32px;">
+      <p>
+        AURA empowers early-stage brands by providing access to resources,
+        commercial spaces, partnerships, and a long-term reward ecosystem.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="support.html">Support</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 AURA. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

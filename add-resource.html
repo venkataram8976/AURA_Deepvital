@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Resource – AURA</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- JS -->
+  <script src="js/auth.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+
+<body class="add-resource-page">
+
+<!-- ================= HEADER (COMMON) ================= -->
+<header class="header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo">
+    </a>
+    <div class="nav-right">
+
+  <!-- Profile Icon -->
+  <a href="profile.html" class="profile-icon">
+    <img
+      id="headerProfileAvatar"
+      src="assets/profile-avatar.jpg"
+      alt="Profile"
+    >
+  </a>
+
+  <!-- Menu Toggle -->
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  </div>
+
+  <!-- Toggle Menu -->
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="resources.html" class="active">Resources</a>
+    <a href="properties.html">Properties</a>
+    <a href="rewards.html">Rewards</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="buy-earn.html">Buy & Earn</a>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+  <section class="container" style="max-width:520px; margin-top:2.5rem;">
+    <h1 class="page-title">Add New Resource</h1>
+    <p>
+      Use this form to add new resources such as mentorship programs,
+      tools, or professional services to the platform.
+    </p>
+
+    <div class="card" style="margin-top:1.5rem;">
+      <form id="resourceForm">
+
+        <label>Resource Title</label>
+        <input
+          type="text"
+          id="title"
+          required
+          placeholder="e.g. Startup Mentorship Program"
+          style="width:100%; margin-bottom:0.8rem;"
+        >
+
+        <label>Description</label>
+        <textarea
+          id="description"
+          required
+          placeholder="Brief description of the resource"
+          style="width:100%; margin-bottom:0.8rem;"
+        ></textarea>
+
+        <label>Resource Type</label>
+        <select
+          id="type"
+          required
+          style="width:100%; margin-bottom:0.8rem;"
+        >
+          <option value="">Select type</option>
+          <option>Mentorship</option>
+          <option>Tool</option>
+          <option>Service</option>
+        </select>
+
+        <label>Access Type</label>
+        <select
+          id="access"
+          required
+          style="width:100%; margin-bottom:1.2rem;"
+        >
+          <option>Free</option>
+          <option>Paid</option>
+          <option>Invitation-based</option>
+        </select>
+
+        <button type="submit" class="btn-primary" style="width:100%;">
+          Add Resource
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER (COMMON) ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div class="footer-section">
+      <img src="assets/logo.svg" alt="AURA Logo" style="height:32px;">
+      <p>
+        AURA empowers early-stage brands by providing access to resources,
+        commercial spaces, partnerships, and a long-term reward ecosystem.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="support.html">Support</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 AURA. All rights reserved.
+  </div>
+</footer>
+
+<!-- PAGE SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("resourceForm");
+  if (!form) return;
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const resources = (() => {
+      try { return JSON.parse(localStorage.getItem("aura_resources") || "[]"); }
+      catch { return []; }
+    })();
+    resources.push({
+      id: Date.now(),
+      title: document.getElementById("title").value.trim(),
+      description: document.getElementById("description").value.trim(),
+      type: document.getElementById("type").value,
+      access: document.getElementById("access").value
+    });
+    localStorage.setItem("aura_resources", JSON.stringify(resources));
+    alert("Resource saved in this browser.");
+    form.reset();
+  });
+});
+</script>
+
+</body>
+</html>

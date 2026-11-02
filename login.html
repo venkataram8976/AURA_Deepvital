@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – AURA</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- JS -->
+  <script src="js/api.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+
+<body class="login-page">
+
+<!-- ================= HEADER (LOGO ONLY) ================= -->
+<header class="header">
+  <div class="container header-inner">
+    <span class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo">
+    </span>
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+  <div class="container" style="max-width:420px; margin-top:3rem;">
+    <div class="card">
+      <h1 style="margin-bottom:1rem;">Login</h1>
+
+      <form onsubmit="event.preventDefault(); Auth.login();">
+
+        <div style="margin-bottom:1rem;">
+          <label>Email</label>
+          <input type="email" id="loginEmail"
+                 placeholder="Enter your email"
+                 style="width:100%; padding:0.5rem;" required>
+        </div>
+
+        <div style="margin-bottom:1.2rem;">
+          <label>Password</label>
+          <input type="password" id="loginPassword"
+                 placeholder="Enter your password"
+                 style="width:100%; padding:0.5rem;" required>
+        </div>
+
+                <!-- Forgot Password -->
+        <div style="text-align:right; margin-bottom:1.2rem;">
+          <a href="forgot-password.html"
+             style="font-size:0.85rem; color:#4f46e5; text-decoration:none;">
+            Forgot password?
+          </a>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width:100%;">
+          Login
+        </button>
+
+      </form>
+
+      <p style="margin-top:1rem; font-size:0.9rem;">
+        Don’t have an account?
+        <a href="register.html" style="color:#4f46e5; text-decoration:none;">
+          Register
+        </a>
+      </p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

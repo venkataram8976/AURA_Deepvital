@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA – Properties</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- JS -->
+  <script src="js/auth.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/properties.js" defer></script>
+</head>
+
+<body class="properties-page">
+
+<!-- ================= HEADER (COMMON) ================= -->
+<header class="header">
+  <div class="container header-inner">
+
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo" />
+    </a>
+
+    <div class="nav-right">
+
+  <!-- Profile Icon -->
+  <a href="profile.html" class="profile-icon">
+    <img
+      id="headerProfileAvatar"
+      src="assets/profile-avatar.jpg"
+      alt="Profile"
+    >
+  </a>
+
+  <!-- Menu Toggle -->
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  </div>
+
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="properties.html" class="active">Properties</a>
+    <a href="rewards.html">Rewards</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="buy-earn.html">Buy & Earn</a>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+  <section class="container" style="margin-top:2.5rem;">
+    <h1 class="page-title">Franchise Ecosystem</h1>
+    <p class="section-subtitle">
+      Discover franchise opportunities or collaborate with partners to build new ventures together.
+    </p>
+  </section>
+
+  <!-- ================= FRANCHISE OPPORTUNITIES ================= -->
+  <section class="container franchise-section">
+
+    <div class="section-header">
+      <h2 class="section-title">Franchise Opportunities</h2>
+      <button class="btn-primary" id="uploadOpportunityBtn">
+        Upload Franchise Opportunity
+      </button>
+    </div>
+
+    <div class="franchise-search-bar">
+      <div class="search-field keyword-field">
+        <label>FIND FRANCHISES</label>
+        <input type="text" id="franchiseKeyword" placeholder="Franchise name or category" />
+      </div>
+
+      <div class="search-field location-field">
+        <label for="franchiseLocation">CITY</label>
+        <select id="franchiseLocation">
+          <option value="">All cities</option><option value="bengaluru">Bengaluru</option>
+          <option value="chennai">Chennai</option><option value="hyderabad">Hyderabad</option>
+          <option value="pune">Pune</option>
+        </select>
+      </div>
+      <div class="search-field filter-field">
+        <label for="franchiseCategory">CATEGORY</label>
+        <select id="franchiseCategory"><option value="">All categories</option><option value="food">Food &amp; Beverage</option><option value="fitness">Fitness</option><option value="retail">Retail</option></select>
+      </div>
+      <div class="search-field filter-field">
+        <label for="franchiseInvestment">INVESTMENT</label>
+        <select id="franchiseInvestment"><option value="">Any budget</option><option value="under20">Under ₹20L</option><option value="20to30">₹20L – ₹30L</option><option value="above30">Above ₹30L</option></select>
+      </div>
+      <button class="search-btn" id="franchiseSearchBtn" type="button" aria-label="Search franchises">⌕</button>
+      <button class="filter-reset" id="franchiseResetBtn" type="button">Clear</button>
+    </div>
+
+    <p class="filter-results" id="franchiseResults" aria-live="polite">Showing all franchise opportunities</p>
+    <div class="grid-3" id="franchiseCards">
+
+      <div class="card franchise-card" data-name="urban brew café" data-category="food & beverage" data-city="hyderabad" data-investment="20">
+        <div class="collab-badge"><span>PARTNER</span></div>
+        <img src="assets/cafe.jpg" class="card-img">
+        <h3>Urban Brew Café</h3>
+        <p><strong>Category:</strong> Food & Beverage</p>
+        <p><strong>City:</strong> Hyderabad</p>
+        <p><strong>Investment:</strong> ₹15L – ₹25L</p>
+        <p><strong>Franchise Type:</strong> Single Unit</p>
+        <button type="button" class="btn-outline">View Details</button>
+      </div>
+
+      <div class="card franchise-card" data-name="fitzone gym" data-category="fitness" data-city="bengaluru" data-investment="35">
+        <img src="assets/gym.jpg" class="card-img">
+        <h3>FitZone Gym</h3>
+        <p><strong>Category:</strong> Fitness</p>
+        <p><strong>City:</strong> Bengaluru</p>
+        <p><strong>Investment:</strong> ₹30L – ₹40L</p>
+        <p><strong>Franchise Type:</strong> Master Franchise</p>
+        <button type="button" class="btn-outline">View Details</button>
+      </div>
+
+      <div class="card franchise-card" data-name="quickmart express" data-category="retail" data-city="chennai" data-investment="25">
+        <img src="assets/retail.jpg" class="card-img">
+        <h3>QuickMart Express</h3>
+        <p><strong>Category:</strong> Retail</p>
+        <p><strong>City:</strong> Chennai</p>
+        <p><strong>Investment:</strong> ₹20L – ₹30L</p>
+        <p><strong>Franchise Type:</strong> Area Franchise</p>
+        <button type="button" class="btn-outline">View Details</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FRANCHISE COLLABORATION ================= -->
+  <section class="container franchise-section">
+
+    <div class="section-header">
+      <h2 class="section-title">Franchise Collaboration</h2>
+      <button class="btn-primary" id="uploadCollaborationBtn">
+        Upload Collaboration Proposal
+      </button>
+    </div>
+
+    <div class="franchise-search-bar">
+      <div class="search-field keyword-field">
+        <label>FIND COLLABORATIONS</label>
+        <input type="text" id="collabKeyword" placeholder="Project name or category" />
+      </div>
+
+      <div class="search-field location-field">
+        <label for="collabLocation">CITY</label>
+        <select id="collabLocation">
+          <option value="">All cities</option><option value="bengaluru">Bengaluru</option>
+          <option value="chennai">Chennai</option><option value="hyderabad">Hyderabad</option>
+          <option value="pune">Pune</option>
+        </select>
+      </div>
+      <div class="search-field filter-field">
+        <label for="collabCategory">CATEGORY</label>
+        <select id="collabCategory"><option value="">All categories</option><option value="food">Food</option><option value="electric">Electric Mobility</option><option value="health">Healthcare</option></select>
+      </div>
+      <button class="search-btn" id="collabSearchBtn" type="button" aria-label="Search collaborations">⌕</button>
+      <button class="filter-reset" id="collabResetBtn" type="button">Clear</button>
+    </div>
+
+    <p class="filter-results" id="collabResults" aria-live="polite">Showing all collaboration proposals</p>
+    <div class="grid-3" id="collaborationCards">
+
+      <div class="card collaboration-card" data-name="south india cloud kitchen" data-category="food startup" data-city="bengaluru" data-investment="12">
+        <img src="assets/cloud-kitchen.jpg" class="card-img">
+        <h3>South India Cloud Kitchen</h3>
+        <p><strong>Category:</strong> Food Startup</p>
+        <p><strong>Preferred Location:</strong> Bengaluru</p>
+        <p><strong>Looking For:</strong> Investor + Operations Partner</p>
+        <p><strong>Budget:</strong> ₹12L</p>
+        <button type="button" class="btn-outline">View Proposal</button>
+      </div>
+
+      <div class="card collaboration-card" data-name="ev two-wheeler dealership" data-category="electric mobility" data-city="pune" data-investment="18">
+        <div class="collab-badge"><span>PARTNER</span></div>
+        <img src="assets/ev.jpg" class="card-img">
+        <h3>EV Two-Wheeler Dealership</h3>
+        <p><strong>Category:</strong> Electric Mobility</p>
+        <p><strong>Preferred Location:</strong> Pune</p>
+        <p><strong>Looking For:</strong> Strategic Partner</p>
+        <p><strong>Budget:</strong> ₹18L</p>
+        <button type="button" class="btn-outline">View Proposal</button>
+      </div>
+
+      <div class="card collaboration-card" data-name="urban healthcare clinic" data-category="healthcare services" data-city="hyderabad" data-investment="22">
+        <img src="assets/healthcare.jpg" class="card-img">
+        <h3>Urban HealthCare Clinic</h3>
+        <p><strong>Category:</strong> Healthcare Services</p>
+        <p><strong>Preferred Location:</strong> Hyderabad</p>
+        <p><strong>Looking For:</strong> Medical + Investment Partner</p>
+        <p><strong>Budget:</strong> ₹22L</p>
+        <button type="button" class="btn-outline">View Proposal</button>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Opportunity / proposal details -->
+<div class="modal" id="propertyDetailsModal" role="dialog" aria-modal="true" aria-labelledby="propertyDetailsTitle">
+  <div class="modal-content detail-modal-content">
+    <button type="button" class="modal-close" id="closePropertyDetails" aria-label="Close details">×</button>
+    <span class="recommendation-tag" id="propertyDetailsType"></span>
+    <h2 id="propertyDetailsTitle"></h2>
+    <div id="propertyDetailsBody" class="property-details-body"></div>
+    <div class="modal-actions"><button type="button" class="btn-primary" id="closePropertyDetailsAction">Close</button></div>
+  </div>
+</div>
+
+<!-- ================= OPPORTUNITY MODAL (ADDED – REQUIRED) ================= -->
+<div class="modal" id="opportunityModal">
+  <div class="modal-content">
+    <h3>Upload Franchise Opportunity</h3>
+    <p class="form-helper">Complete the details below. This demo saves a private draft in this browser; it does not publish the listing.</p>
+
+    <label class="upload-label">Franchise Image</label>
+    <input type="file" id="opportunityImage" accept="image/*">
+    <img id="opportunityPreview" class="image-preview">
+
+    <input type="text" required placeholder="Franchise Name" aria-label="Franchise Name">
+    <input type="text" required placeholder="Category" aria-label="Category">
+    <input type="text" required placeholder="City" aria-label="City">
+    <input type="text" required placeholder="Investment Range" aria-label="Investment Range">
+
+    <!-- ✅ ADDED -->
+    <select required>
+      <option value="">Franchise Type</option>
+      <option>Single Unit</option>
+      <option>Area Franchise</option>
+      <option>Master Franchise</option>
+    </select>
+
+<!-- Incubated Company -->
+<label class="incubated-toggle">
+  <span>Incubated Company (Show PARTNER tag)</span>
+  <input type="checkbox" id="franchiseIncubated">
+</label>
+
+
+    <div class="modal-actions">
+      <button type="button" class="btn-outline close-modal">Cancel</button>
+      <button type="button" class="btn-primary">Save Draft</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= COLLABORATION MODAL (ADDED – REQUIRED) ================= -->
+<div class="modal" id="collaborationModal">
+  <div class="modal-content">
+    <h3>Upload Collaboration Proposal</h3>
+    <p class="form-helper">Complete the details below. This demo saves a private draft in this browser; it does not publish the proposal.</p>
+
+    <label class="upload-label">Project Image</label>
+    <input type="file" id="collaborationImage" accept="image/*">
+    <img id="collaborationPreview" class="image-preview">
+
+    <input type="text" required placeholder="Project Name" aria-label="Project Name">
+    <input type="text" required placeholder="Category" aria-label="Category">
+    <input type="text" required placeholder="Preferred City" aria-label="Preferred City">
+    <input type="text" required placeholder="Looking For (e.g. Investor + Operations Partner)" aria-label="Partner requirements">
+    <input type="text" required placeholder="Budget" aria-label="Budget">
+
+    <label class="incubated-toggle">
+  <span>Incubated Company (Show PARTNER tag)</span>
+  <input type="checkbox" id="collabIncubated">
+    </label>
+
+
+    <div class="modal-actions">
+      <button type="button" class="btn-outline close-modal">Cancel</button>
+      <button type="button" class="btn-primary">Save Draft</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FOOTER (COMMON) ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-section">
+      <img src="assets/logo.svg" alt="AURA Logo" style="height:32px;">
+      <p>
+        AURA empowers early-stage brands through franchise opportunities,
+        collaborations, and a long-term reward ecosystem.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 AURA. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

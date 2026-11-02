@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module Details – AURA</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- JS -->
+  <script src="js/app.js" defer></script>
+  <script src="js/module-detail.js" defer></script>
+</head>
+
+<body class="module-detail-page">
+
+<!-- ================= HEADER (COMMON) ================= -->
+<header class="header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo" />
+    </a>
+
+    <div class="nav-right">
+
+  <!-- Profile Icon -->
+  <a href="profile.html" class="profile-icon">
+    <img
+      id="headerProfileAvatar"
+      src="assets/profile-avatar.jpg"
+      alt="Profile"
+    >
+  </a>
+
+  <!-- Menu Toggle -->
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  </div>
+
+  <!-- Toggle Menu -->
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="resources.html" class="active">Resources</a>
+    <a href="properties.html">Properties</a>
+    <a href="rewards.html">Rewards</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="buy-earn.html">Buy & Earn</a>
+  </nav>
+</header>
+
+<!-- ================= MODULE LAYOUT ================= -->
+<main class="module-layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="module-sidebar">
+    <h2 class="module-sidebar-title" id="moduleTitle"></h2>
+
+    <ul class="module-topic-list">
+      <li class="active" data-topic="topic1">Module 1</li>
+      <li data-topic="topic2">Module 2</li>
+      <li data-topic="topic3">Module 3</li>
+    </ul>
+
+    <a href="assets/pdfs/aura-foundations.pdf" class="download-pdf" download>
+      ⬇ Download Full PDF
+    </a>
+  </aside>
+
+  <!-- RIGHT CONTENT -->
+  <section class="module-content">
+
+    <!-- Topic 1 -->
+    <div class="topic-content active" id="topic1">
+      <h1>Understanding AURA</h1>
+      <p>
+        AURA is a fintech-enabled business ecosystem designed to convert
+        user actions into long-term economic value. The platform connects
+        users, brands, partners, and collaborators through a unified growth
+        model.
+      </p>
+      <p>
+        This section explains the vision, purpose, and philosophy behind
+        AURA, including how learning, engagement, and participation
+        translate into measurable outcomes.
+      </p>
+    </div>
+
+    <!-- Topic 2 -->
+    <div class="topic-content" id="topic2">
+      <h1>Platform Architecture</h1>
+      <p>
+        The AURA platform is built on a modular architecture consisting of
+        a rewards engine, collaboration layer, analytics framework, and
+        opportunity marketplace.
+      </p>
+      <p>
+        This architecture ensures scalability, transparency, and flexibility,
+        allowing users and businesses to grow together efficiently.
+      </p>
+    </div>
+
+    <!-- Topic 3 -->
+    <div class="topic-content" id="topic3">
+      <h1>Value Creation Model</h1>
+      <p>
+        Every action on AURA contributes to long-term value creation.
+        Instead of short-term incentives, rewards accumulate and unlock
+        meaningful opportunities such as partnerships, investments, and
+        ownership.
+      </p>
+      <p>
+        This model encourages consistency, learning, and collaboration,
+        enabling users to build sustainable digital and financial assets.
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ================= FOOTER (COMMON) ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div class="footer-section">
+      <img src="assets/logo.svg" alt="AURA Logo" style="height:32px;">
+      <p>
+        AURA empowers early-stage brands by providing access to resources,
+        commercial spaces, partnerships, and a long-term reward ecosystem.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="support.html">Support</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 AURA. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

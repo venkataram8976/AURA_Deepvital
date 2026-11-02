@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA – Home</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- JS -->
+  <script src="js/app.js" defer></script>
+</head>
+
+<body class="home-page">
+
+<!-- ================= HEADER (COMMON FOR ALL PAGES) ================= -->
+<header class="header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo">
+    </a>
+
+<!-- Right Side -->
+<div class="nav-right">
+
+  <!-- Login: Visible when logged out -->
+  <a href="login.html" class="primary-login" id="loginLink">
+    Login
+  </a>
+
+  <!-- Profile: Visible when logged in -->
+  <a href="profile.html" class="primary-login"
+     id="profileLink" style="display:none;">
+    Profile
+  </a>
+
+  <!-- Toggle -->
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</div>
+  </div>
+
+  <!-- Toggle Menu -->
+  <nav class="nav" id="navMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="properties.html">Properties</a>
+    <a href="rewards.html">Rewards</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="buy-earn.html">Buy & Earn</a>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+        <h1>Empowering Early-Stage Brands</h1>
+        <p>
+          AURA provides resources, commercial spaces, partnerships,
+          and a long-term reward ecosystem.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#rewards-overview" class="btn-primary" id="getStartedBtn">Get Started</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="assets/hero-illustration.png" alt="Platform overview">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REWARDS OVERVIEW -->
+  <section class="rewards-overview fade-in" id="rewards-overview">
+    <div class="container">
+
+      <div class="overview-header">
+        <h2 class="page-title">Rewards & Value Overview</h2>
+        <p class="section-subtitle">
+          Track how your rewards convert into real business value.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+
+        <div class="overview-card primary">
+          <h4>Reward Balance</h4>
+          <p class="metric" id="rewardPoints">0 pts</p>
+          <span class="status positive">Earning active</span>
+        </div>
+
+        <div class="overview-card">
+          <h4>Available Value (Crypto)</h4>
+          <p class="metric crypto-value" id="cryptoValue">0.0000 BTC</p>
+          <p class="fiat-value" id="fiatValue">≈ ₹0</p>
+          <span class="status neutral">Indicative rate</span>
+        </div>
+
+        <div class="overview-card">
+          <h4>Engagement</h4>
+          <p class="metric">0 stores</p>
+          <span class="status neutral">Partner interactions</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <section class="recommendations">
+    <div class="container">
+      <h2 class="page-title">Recommended for You</h2>
+      <p class="section-subtitle">
+        Opportunities tailored to your interests and location.
+      </p>
+
+      <div class="grid-3" id="recommendationsList">
+        <!-- JS injected -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Recommendation details dialog -->
+<div class="modal" id="recommendationModal" role="dialog" aria-modal="true" aria-labelledby="recommendationModalTitle">
+  <div class="modal-content detail-modal-content">
+    <button type="button" class="modal-close" id="closeRecommendationModal" aria-label="Close details">×</button>
+    <span class="recommendation-tag" id="recommendationType"></span>
+    <h2 id="recommendationModalTitle"></h2>
+    <p id="recommendationDescription"></p>
+    <dl class="detail-list">
+      <div><dt>Location</dt><dd id="recommendationLocation"></dd></div>
+      <div><dt>Investment</dt><dd id="recommendationInvestment"></dd></div>
+      <div><dt>Opportunity</dt><dd id="recommendationOpportunity"></dd></div>
+      <div><dt>What to expect</dt><dd id="recommendationBenefits"></dd></div>
+    </dl>
+    <p class="detail-note">Details shown are illustrative demo information. Confirm commercial terms directly with the opportunity owner.</p>
+    <div class="modal-actions">
+      <a class="btn-outline" href="properties.html">Explore Properties</a>
+      <button type="button" class="btn-primary" id="closeRecommendationAction">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FOOTER (COMMON FOR ALL PAGES) ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div class="footer-section">
+      <img src="assets/logo.svg" alt="AURA Logo" style="height:32px;">
+      <p>
+        AURA empowers early-stage brands by providing access to resources,
+        commercial spaces, partnerships, and a long-term reward ecosystem.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="support.html">Support</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 AURA. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

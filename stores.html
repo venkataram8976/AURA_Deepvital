@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nearby Partner Stores – AURA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- JS -->
+  <script src="js/stores.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo">
+    </a>
+
+    <div class="nav-right">
+
+  <!-- Profile Icon -->
+  <a href="profile.html" class="profile-icon">
+    <img
+      id="headerProfileAvatar"
+      src="assets/profile-avatar.jpg"
+      alt="Profile"
+    >
+  </a>
+
+  <!-- Menu Toggle -->
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  </div>
+
+  <!-- Toggle Menu -->
+  <nav class="nav mobile-nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="properties.html">Properties</a>
+    <a href="rewards.html">Rewards</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="buy-earn.html" class="active">Buy & Earn</a>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+  <section class="container nearby-page">
+
+    <div class="nearby-header">
+      <h1 class="page-title">Nearby Partner Stores</h1>
+      <p class="section-subtitle">
+        Allow location to discover partner stores and earn rewards instantly.
+      </p>
+    </div>
+
+    <div class="reward-teaser">
+      <h3>💰 Earn Rewards Every Time You Spend</h3>
+      <p>
+        Earn <strong>10 points for every ₹100</strong> spent at partner stores.
+        Points convert into future business value.
+      </p>
+    </div>
+
+    <div class="location-action">
+      <button class="btn-primary pulse" id="allowLocationBtn">
+        Allow Location
+      </button>
+      <p class="trust-note" id="locationStatus" role="status">
+        🔒 Your location is requested only when you press Allow Location. High-accuracy mode will be requested where supported.
+      </p>
+      <div class="manual-location">
+        <label for="manualCity">Or browse by city</label>
+        <div class="manual-location-controls">
+          <select id="manualCity">
+            <option value="">All listed cities</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Hyderabad">Hyderabad</option>
+          </select>
+          <button type="button" class="btn-outline" id="manualCityBtn">Find stores</button>
+          <button type="button" class="btn-outline" id="retryLocationBtn">Retry location</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stores injected by JS -->
+    <div class="grid-3" id="storesList"></div>
+
+  </section>
+</main>
+
+
+</body>
+</html>

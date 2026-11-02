@@ -1,0 +1,102 @@
+:root {
+  /* BRAND COLORS (UPDATED) */
+  --primary: #00412E;     /* Dark Green */
+  --accent: #96BF8A;      /* Light Green (hover) */
+  --light: #FFFFFF;       /* White background */
+  --border: #E8EAE5;      /* Light grey */
+  --gray: #333333;
+  --dark: #000000;
+}
+
+/* ===== CSS RESET & GLOBAL ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--light);   /* WHITE */
+  color: var(--dark);         /* BLACK */
+  line-height: 1.6;
+  overscroll-behavior: none;
+}
+
+/* ===== TEXT ELEMENTS ===== */
+
+a {
+  text-decoration: none;
+  color: var(--primary);      /* Dark Green */
+}
+
+a:hover {
+  color: var(--accent);       /* Light Green */
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--primary);      /* Dark Green headings */
+}
+
+p {
+  color: var(--dark);         /* Black text */
+  font-size: 0.95rem;
+}
+
+h2.page-title {
+  font-size: 1.4rem;
+}
+
+/* ===== iOS-STYLE MOTION (UNCHANGED) ===== */
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE BASE (UNCHANGED) ===== */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  h2.page-title {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  h2.page-title {
+    font-size: 1.15rem;
+  }
+}

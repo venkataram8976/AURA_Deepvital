@@ -1,0 +1,5 @@
+/* AURA responsive compatibility stylesheet.
+   Responsive breakpoints are currently maintained in base.css,
+   components.css and pages.css. This file is kept so every page's
+   shared stylesheet reference resolves on GitHub Pages.
+*/

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA – Rewards</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- JS -->
+  <script src="js/auth.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/rewards.js" defer></script>
+</head>
+
+<body class="rewards-page">
+
+<!-- ================= HEADER (COMMON) ================= -->
+<header class="header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.svg" alt="AURA Logo" class="logo">
+    </a>
+
+    <div class="nav-right">
+
+  <!-- Profile Icon -->
+  <a href="profile.html" class="profile-icon">
+    <img
+      id="headerProfileAvatar"
+      src="assets/profile-avatar.jpg"
+      alt="Profile"
+    >
+  </a>
+
+  <!-- Menu Toggle -->
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  </div>
+
+  <!-- Toggle Menu -->
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="properties.html">Properties</a>
+    <a href="rewards.html" class="active">Rewards</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="buy-earn.html">Buy & Earn</a>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+<section class="container">
+  <h1 class="page-title">Rewards</h1>
+  <p>
+    Reward points convert into <strong>AURA Coins</strong> based on platform
+    valuation, revenue, and circulating supply.
+  </p>
+</section>
+
+<section class="container" style="margin-top:2rem;">
+  <div class="grid-3">
+    <div class="card">
+      <h3>Total Reward Points</h3>
+      <p id="totalPoints" style="font-size:1.8rem;font-weight:600;">0</p>
+    </div>
+
+    <div class="card">
+      <h3>AURA Coin Value</h3>
+      <p>Dynamic valuation model based on ecosystem growth.</p>
+    </div>
+
+    <div class="card">
+      <h3>How Rewards Are Earned</h3>
+      <p>
+        Rewards are generated through purchases, collaborations,
+        learning participation, and ecosystem growth.
+      </p>
+      <br>
+      <button class="btn-primary" id="earnPointsBtn">Earn Points</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GRAPHS + CALCULATOR ===== -->
+<section class="container fade-in" style="margin-top:3rem;">
+  <h2 class="page-title" style="text-align:center;">
+    AURA Coin Value & Rewards Calculator
+  </h2>
+
+  <div class="rewards-graph-layout">
+
+    <div class="graph-card">
+      <h4>1 Day AURA Coin Value</h4>
+      <canvas id="dayChart"></canvas>
+    </div>
+
+    <div class="crypto-card">
+      <div class="crypto-field">
+        <label>Reward Points</label>
+        <input type="number" id="calculatorPoints" value="0" min="0">
+      </div>
+
+      <div class="crypto-field">
+        <label>Revenue Value (₹)</label>
+        <input type="text" id="inrValue" readonly>
+      </div>
+
+      <div class="crypto-field">
+        <label>Token</label>
+        <input type="text" value="AURA Coin" readonly>
+      </div>
+
+      <div class="crypto-result">
+        <span id="cryptoResult">0.000000 AURA</span>
+      </div>
+
+      <p class="crypto-info">
+        Each Reward Point contributes ₹<span id="pointRate">1.25</span>
+      </p>
+    </div>
+
+    <div class="graph-card">
+      <div class="graph-header">
+        <h4>AURA Coin Trend</h4>
+        <select id="rangeSelector">
+          <option value="7">1 Week</option>
+          <option value="30">1 Month</option>
+          <option value="180">6 Months</option>
+          <option value="365">1 Year</option>
+          <option value="1825">5 Years</option>
+        </select>
+      </div>
+      <canvas id="rangeChart"></canvas>
+    </div>
+
+  </div>
+</section>
+
+<section class="container" style="margin-top:3rem;">
+  <h2 class="page-title">Reward History</h2>
+  <div class="card">
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Activity</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody id="rewardHistory"></tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER (COMMON) ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div class="footer-section">
+      <img src="assets/logo.svg" alt="AURA Logo" style="height:32px;">
+      <p>
+        AURA enables users to convert engagement into
+        measurable ownership through a reward-driven economic model.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="support.html">Support</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 AURA. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
